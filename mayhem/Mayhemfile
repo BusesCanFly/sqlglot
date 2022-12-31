@@ -1,0 +1,9 @@
+project: sqlglot
+
+target: fuzz_sqlglot
+
+image: ghcr.io/busescanfly/sqlglot:latest
+
+cmds:
+    - cmd: /src/mayhem/fuzz_sqlglot.py
+      libfuzzer: true
