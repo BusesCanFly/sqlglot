@@ -18,10 +18,10 @@ def test_input(input_bytes):
     
     try:
         sqlglot.transpile(input_string, read=input_string, write=input_string)
-        parse_one(input_string).find_all(exp.Column)
-        optimize(sqlglot.parse_one(input_string), 
-            schema={input_string: {input_string: input_string}}
-            ).sql(pretty=True)
+        # parse_one(input_string).find_all(exp.Column)
+        # optimize(sqlglot.parse_one(input_string), 
+        #     schema={input_string: {input_string: input_string}}
+        #     ).sql(pretty=True)
     except AttributeError: # NoneType.something()
         pass
 
