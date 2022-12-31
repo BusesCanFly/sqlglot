@@ -24,6 +24,8 @@ def test_input(input_bytes):
         #     ).sql(pretty=True)
     except AttributeError: # NoneType.something()
         pass
+    except ValueError: # might be missing some good errors
+        pass
 
 def main():
     atheris.Setup(sys.argv, test_input)
